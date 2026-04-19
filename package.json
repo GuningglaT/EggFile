@@ -1,0 +1,27 @@
+{
+  "name": "eggfile",
+  "version": "1.0.0",
+  "description": "P2P file sharing desktop app",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --dev",
+    "build": "electron-builder"
+  },
+  "build": {
+    "appId": "com.eggfile.app",
+    "productName": "EggFile",
+    "directories": { "output": "dist" },
+    "files": ["src/**/*", "assets/**/*", "package.json"],
+    "win": { "target": "nsis", "icon": "assets/icon.ico" },
+    "nsis": { "oneClick": false, "allowToChangeInstallationDirectory": true }
+  },
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.0.0"
+  },
+  "dependencies": {
+    "uuid": "^9.0.0",
+    "mqtt": "^5.0.0"
+  }
+}
